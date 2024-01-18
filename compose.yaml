@@ -13,7 +13,7 @@ services:
       context: .
     secrets:
       - db-password
-    platform: linux/amd64
+    platform: linux/arm64
     environment:
       - POSTGRES_DB=example
       - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
@@ -35,7 +35,7 @@ services:
         condition: service_healthy
   db:
     image: postgres
-    platform: linux/amd64
+    platform: linux/arm64
     restart: always
     user: postgres
     secrets:
