@@ -16,7 +16,6 @@ spec:
       containers:
        - name: flask-service
          image: gaertner522/python-docker
-         platform: linux/amd64
          imagePullPolicy: Always
          env:
           - name: POSTGRES_PASSWORD
